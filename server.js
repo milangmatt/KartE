@@ -12,7 +12,7 @@ const pool = createPool({
 
     host: 'localhost',
     user: 'root',
-    password: 'password',
+    password: 'Genjutsu2468',
     database: 'pragthi',
     connectionLimit: 1
 }).promise()
@@ -53,7 +53,7 @@ async function checkLogin(email, password) {
 
     return false;
 }
-async function checkSignup(email,password,confirm){
+async function checkSignup(username,email,password,confirm){
     //check if the user is already in the database
     var result = await pool.query('select password from users where email = ?', [email])
 
@@ -72,7 +72,7 @@ async function checkSignup(email,password,confirm){
            return false;
        }
        
-       await pool.query('INSERT INTO users values(default, ?, ?)',[],[email],[password]);
+       await pool.query('INSERT INTO users (username,email,password) values ($1,$2,$3)',[username,email,password]);
        return true;
    }
 }
@@ -198,13 +198,14 @@ app.get('/signup', (req, res) => {
 app.post('/check_signup', (req, res) => {
     console.log("checking signup")
     console.log(req.body)
+    let username = req.body['username']
     let email = req.body['email'];
     let password = req.body['password'];
     let confirm = req.body['confirm-password'];
 
-    console.log(email, password,confirm)
+    console.log(username,email, password,confirm)
 
-    checkSignup(email, password,confirm)
+    checkSignup(username,email, password,confirm)
     res.redirect("/login")
 //     checkSignup(email, password,confirm).then((status) => {
 
