@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAGTHI</title>
+
+    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/productDetails.css">
+
+</head>
+
+<body>
+
+    <%- include('navbar') %>
+
+
+    <div id="productDetails">
+
+
+        <img src="/static/product_images/<%= details.product_id %>.png" alt="">
+
+        <div id="details_section">
+
+            <div id="details">
+
+
+                <h3 id="product_title">
+                    <%=details.product_title%>
+                </h3>
+
+                <ul>
+
+                    <li>i5 12500H processor</li>
+                    <li>RTX 3050</li>
+                    <li>16GB DDR5 RAM</li>
+                    <li>500GB SSD</li>
+
+                </ul>
+
+                <h3>Rs 87,000</h3>
+
+                <form action="/purchase_details" method = "GET">
+
+                    <input type="hidden" name = "product" value="<%=details.product_id%>">
+                    <button id="buy_now_button">BUY NOW</button>
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

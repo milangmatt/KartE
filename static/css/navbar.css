@@ -1,0 +1,124 @@
+#navbar {
+    /* background-color: red;*/
+    position:fixed 0px 0px ;
+   
+   
+     display: flex;
+     flex-direction: row;
+     height: 70px;
+     justify-content:space-between;
+     margin:0px;
+     padding:0px;
+     width: 99vw;
+     align-items: center;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+     margin-left: 10px;
+     margin-top: 10px;
+ }
+#mainLogo {
+    color:rgb(44, 44, 110);
+    font-family: "Georgia", serif;
+    margin-left: 5px;
+}
+.main{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+#search{
+
+    height: 40%;
+    width: 30%;
+     background-color:transparent;
+
+    display: flex;
+
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 4px;
+
+    align-items: center;
+    justify-content: center;
+
+    
+}
+#search form{
+    background-color:rgb(246,246,246);
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#search input{
+    
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+   border: 0px;
+    outline: 0px;
+
+    background-color:transparent;
+}
+.rightDiv{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+}
+.right{
+    
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: small;
+    border:1px solid;
+    height:30px;
+    width:80px;
+    border-radius: 5px;
+    margin: 3px;
+    padding:0px 3px 0px 3px;
+    text-align: center;
+    display:flex;
+align-items:center;
+justify-content:center;
+   
+}
+#ordersicon{
+width: 50px;
+    
+border-color: aliceblue;
+    
+}
+
+#SignupButton{
+    background-color: rgb(44, 44, 110);
+    
+}
+#loginbutton a{
+    text-decoration: none;
+    color:black;
+}
+#SignupButton a{
+    text-decoration: none;
+    color: aliceblue;
+}
+#SignupButton:hover{
+   background-color: rgb(6, 94, 126);
+   border-color: rgb(6, 94, 126);
+}
+#home a{
+    text-decoration: none;
+    color: black;
+}
+#loginbutton a:hover{
+    color:rgb(44, 44, 110);
+    ;
+}
+#home a:hover{
+    color:rgb(44, 44, 110);
+    ;
+}
+#hometext{
+    box-align:center
+}

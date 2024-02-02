@@ -1,0 +1,74 @@
+body{
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.title {
+	color: #5C6AC4;
+}
+
+#purchase_details{
+  /* background-color: rgb(235, 235, 235 */
+  background-color: white;
+  /* border: 1px solid black; */
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heading{
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+.details_section{
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: green; */
+  flex-direction: column;
+  width: 60%;
+
+
+}
+
+.details_section input{
+
+  width: 100%;
+  font-size: 16px;
+}
+
+form{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: green; */
+  width: 50%;
+}
+
+
+form button{
+
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: 0px;
+  margin-top: 30px;
+  /* margin-left: auto; */
+}
+
+
+
+
+
+
+
+
+

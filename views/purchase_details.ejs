@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="static/css/navbar.css"> -->
+    <!-- <link rel="stylesheet" href="static/css/purchase_details.css"> -->
+    <link rel="stylesheet" href="static/css/purchase_details.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <%- include('navbar') %> -->
+
+    <div id="purchase_details">
+
+        <h3 class = "heading">Enter Details</h3>
+
+        <form action="/complete_purchase" method="POST">
+
+            <input type="hidden" name="product_id" value="<%=product%>">
+
+        
+        
+        
+        
+
+            <div class="details_section">
+                <h3>Phone</h3>
+                <input type="text" name="phone">
+            </div>
+
+            <div class="details_section">
+                <h3>Address</h3>
+                <input type="text" name="address">
+            </div>
+
+            <div class="details_section">
+                <h3>State</h3>
+                <input type="text" name="state">
+            </div>
+
+            <div class="details_section">
+                <h3>City</h3>
+                <input type="text" name="city">
+            </div>
+
+            <div class="details_section">
+                <h3>Pin Code</h3>
+                <input type="text" name="pin_code">
+            </div>
+
+            <div class="details_section">
+                <h3>Landmark</h3>
+                <input type="text" name="land_mark">
+            </div>
+
+            <button id="submit_button" type="submit">SUBMIT</button>
+
+        </form>
+    </div>
+</body>
+
+</html>

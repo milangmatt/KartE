@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/product_list2.css">
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <%- include('navbar') %>
+
+
+
+        <div id="allproducts">
+
+            <% products.forEach((product)=>{ %>
+
+
+                <div class="singleProduct">
+
+                    <form action="/details" method="get">
+
+
+                        <input type="hidden" name="product" value="<%=product.product_id%>">
+
+                        <button class="submit_div" type="submit">
+
+
+
+                            <img src="/static/product_images/<%= product.product_id %>.png" alt="image" />
+
+
+                            <div class="details">
+
+                                <h3 class="product_title">
+                                    <%= product.product_name %>
+                                </h3>
+
+                                <h3 class="product_price">Rs <%= product.price %>
+                                </h3>
+
+                            </div>
+
+
+
+                        </button>
+                    </form>
+                </div>
+
+
+
+
+                <% }) %>
+
+        </div>
+
+
+
+</body>
+
+</html>

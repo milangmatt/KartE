@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/ordered_products.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <%- include('navbar') %>
+
+
+    <div id="all_products">
+
+        <% products.forEach((product)=>{ %>
+
+
+        <div class="single_product">
+
+            <img src="static/product_images/<%= product.product_id %>.png" alt="">
+
+            <div class="details">
+
+                <h2 class="title"><%= product.product_name %></h2>
+
+                <table class="order_details">
+
+                    <tr>
+
+                        <td>
+                            <h3 class="data_title"> Price </h3>
+                        </td>
+                        <td>
+                            <h3 class="data_value"> 79000 </h3>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3 class="data_title"> Ordered Date </h3>
+                        </td>
+                        <td>
+                            <h3 class="data_value"> 12-12-2023 </h3>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3 class="data_title"> Status </h3>
+                        </td>
+                        <td>
+                            <h3 class="data_value"> Dispatched </h3>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3 class="data_title"> Arrival Date </h3>
+                        </td>
+                        <td>
+                            <h3 class="data_value"> 03-1-2024 </h3>
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+        </div>
+        <%})%>
+
+
+
+
+    </div>
+
+</body>
+
+</html>
